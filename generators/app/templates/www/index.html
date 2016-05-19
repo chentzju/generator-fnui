@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <!-- 如果是IE浏览器，使用最新版本的兼容模式-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- 移动优先 -->
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+   <!-- 对360浏览器，默认使用webkit内核 -->
+  <meta name="renderer" content="webkit">
+
+  <title>hello fnui</title>
+
+  <!-- page start -->
+  <link href="css/fnui.min.css" rel = "stylesheet">
+  <link href="css/main.css" rel = "stylesheet">
+</head>
+
+<body>
+	<header class="fn-topbar">
+	  <h1 class="fn-topbar-brand">
+	      <a href="index.html"><img src = "img/logo.png" width="40px"></a>
+	  </h1>
+
+	  <button class="fn-topbar-btn fn-topbar-toggle fn-btn fn-btn-sm fn-btn-success fn-show-sm-only" data-fn-collapse="{target: '#doc-topbar-collapse'}"><span class="fn-sr-only">导航切换</span> <span class="fn-icon-bars"></span></button>
+
+	  <div class="fn-collapse fn-topbar-collapse fn-fr" id="doc-topbar-collapse">
+	    <ul class="fn-nav fn-nav-pills fn-topbar-nav">
+        <li class="fn-active"><a href="javascript:void(0);" page="main">首页</a></li>
+        <li><a href="javascript:void(0);" page="project">项目</a></li>
+	    </ul>
+
+	    <form class="fn-topbar-form fn-topbar-left fn-form-inline" role="search">
+	      <div class="fn-form-group">
+	        <input type="text" class="fn-form-field fn-input-sm" placeholder="搜索">
+	      </div>
+	    </form>
+      <% if(isJS) { %>
+	    <div class="fn-topbar-right">
+	      <div class="fn-dropdown" data-fn-dropdown="{boundary: '.fn-topbar'}">
+	        <button class="fn-btn fn-btn-success fn-topbar-btn fn-btn-sm fn-dropdown-toggle" data-fn-dropdown-toggle>其他 <span class="fn-icon-caret-down"></span></button>
+	        <ul class="fn-dropdown-content">
+	          <li><a href="#">注册</a></li>
+	          <li><a href="#">退出</a></li>
+	        </ul>
+	      </div>
+	    </div>
+<% } %>
+	    <div class="fn-topbar-right">
+	      <button class="fn-btn fn-btn-success fn-topbar-btn fn-btn-sm">登录</button>
+	    </div>
+	  </div>
+	</header>
+		<div class="container" id = "container">
+	</div>
+
+	<div class="footer">
+			<i class="fn-icon-heart"></i>best regards from FNUI team!
+	</div>
+<% if(isJS) {
+  if (isAMD) { %>
+  <script data-main="js/main" src="js/require.js"></script>
+   <%}else{%>
+   <script src="js/jquery.min.js"></script>
+   <script src="js/fnui.min.js"></script>
+   <script src="js/main.js"></script>
+	<% } }%>
+
+</body>
+</html>

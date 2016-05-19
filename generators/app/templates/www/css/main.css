@@ -1,0 +1,62 @@
+body{
+	font-family:'Microsoft YaHei';
+	color:#555;
+}
+.container,.jumbotron{
+	padding-right:15px;
+	padding-left:15px;
+	margin-left:auto;
+	margin-right:auto;
+	border-radius:6px;
+}
+
+.jumbotron{
+	text-align:center;
+	border-bottom:1px solid #e5e5e5;
+}
+.jumbotron{
+	padding-top:30px;
+	padding-bottom:30px;
+	margin-bottom:30px;
+	color:inherit;
+	background-color:#eee;
+}
+.footer{
+	padding:19px;
+	color:#777;
+	background-color:#f3f3f3;
+	margin-bottom:0;
+}
+@media screen and (min-width:768px){
+	.container{
+		max-width:730px;
+	}
+	
+	.header,.footer{
+		padding-left:0;
+		padding-right:0;
+	}
+	
+	.header{
+		margin-bottom:30px;
+	}
+	
+	.jumbotron{
+		border-bottom:0;
+	}
+}
+
+
+
+
+.fn-nav > li.fn-active > a, .fn-nav > li.fn-active > a:hover, .fn-nav > li.fn-active > a:focus {
+    color: #fff;
+    background-color: #4aaa4a;
+    cursor: default;
+}
+@media only screen and (min-width: 641px){
+	.fn-topbar-nav > li.fn-active > a:after {
+	    opacity: 1;
+	    border-bottom-color: white;
+	}
+}
